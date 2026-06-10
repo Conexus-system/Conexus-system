@@ -136,13 +136,13 @@ export default function PropostaAerea({ onBack }) {
       <table style={{width:"100%",borderCollapse:"collapse",fontSize:11}}>
         <thead>
           <tr style={{background:color+"22"}}>
-            <th style={{padding:"6px 8px",textAlign:"left",fontWeight:800,fontSize:11,textTransform:"uppercase",color:BK,borderBottom:,width:"28%"}}>{title}</th>
-            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:,width:"9%"}}>MOEDA</th>
-            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:,width:"13%"}}>VALOR UNIT.</th>
-            <th style={{padding:"6px 8px",textAlign:"left",fontWeight:700,fontSize:10,color:"#555",borderBottom:,width:"22%"}}>UN. EMBARQUE</th>
-            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:,width:"9%"}}>QTDE.</th>
-            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:,width:"11%"}}>TOTAL</th>
-            {!print && <th style={{width:22,borderBottom:}}/>}
+            <th style={{padding:"6px 8px",textAlign:"left",fontWeight:800,fontSize:11,textTransform:"uppercase",color:BK,borderBottom:"2px solid "+color,width:"28%"}}>{title}</th>
+            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:"2px solid "+color,width:"9%"}}>MOEDA</th>
+            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:"2px solid "+color,width:"13%"}}>VALOR UNIT.</th>
+            <th style={{padding:"6px 8px",textAlign:"left",fontWeight:700,fontSize:10,color:"#555",borderBottom:"2px solid "+color,width:"22%"}}>UN. EMBARQUE</th>
+            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:"2px solid "+color,width:"9%"}}>QTDE.</th>
+            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:"2px solid "+color,width:"11%"}}>TOTAL</th>
+            {!print && <th style={{width:22}}/>}
           </tr>
         </thead>
         <tbody>
@@ -200,7 +200,7 @@ export default function PropostaAerea({ onBack }) {
             <tr>
               <td colSpan={7} style={{padding:"5px 8px"}}>
                 <button onClick={()=>addRow(setter,addDef)}
-                  style={{background:color+"18",color,border:,borderRadius:4,padding:"3px 12px",fontSize:10,cursor:"pointer",fontFamily:"inherit"}}>
+                  style={{background:color+"18",color:color,border:"1px dashed "+color+"66",borderRadius:4,padding:"3px 12px",fontSize:10,cursor:"pointer",fontFamily:"inherit"}}>
                   + Adicionar taxa
                 </button>
               </td>
@@ -226,7 +226,7 @@ export default function PropostaAerea({ onBack }) {
           <button onClick={onBack} style={{background:"transparent",color:"#888",border:"1px solid #333",borderRadius:6,padding:"6px 14px",fontSize:12,cursor:"pointer",fontFamily:"inherit"}}>
             ← Voltar
           </button>
-          <button onClick={()=>setPrint(!print)} style={{background:G+"22",color:G,border:,borderRadius:6,padding:"6px 14px",fontSize:12,fontWeight:600,cursor:"pointer",fontFamily:"inherit"}}>
+          <button onClick={()=>setPrint(!print)} style={{background:G+"22",color:G,border:"1px dashed "+color+"66",borderRadius:6,padding:"6px 14px",fontSize:12,fontWeight:600,cursor:"pointer",fontFamily:"inherit"}}>
             {print ? "✎ Editar" : "👁 Visualizar"}
           </button>
           <button onClick={()=>window.print()} style={{background:G,color:"#111",border:"none",borderRadius:6,padding:"6px 16px",fontSize:12,fontWeight:700,cursor:"pointer",fontFamily:"inherit"}}>
@@ -240,7 +240,7 @@ export default function PropostaAerea({ onBack }) {
         <div style={{background:W,borderRadius:6,boxShadow:"0 2px 20px #0003",overflow:"hidden"}}>
 
           {/* CABEÇALHO */}
-          <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"16px 24px 12px",borderBottom:}}>
+          <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"16px 24px 12px",borderBottom:"2px solid "+color}}>
             <img src={LOGO} alt="Conexus Partners" style={{height:72,objectFit:"contain"}}/>
             <div style={{textAlign:"right"}}>
               {print ? (
@@ -330,7 +330,7 @@ export default function PropostaAerea({ onBack }) {
             </div>
 
             {/* DETALHES */}
-            <div style={{fontWeight:800,fontSize:12,color:BK,marginBottom:10,paddingBottom:4,borderBottom:}}>DETALHES DA COTAÇÃO:</div>
+            <div style={{fontWeight:800,fontSize:12,color:BK,marginBottom:10,paddingBottom:4,borderBottom:"2px solid "+color}}>DETALHES DA COTAÇÃO:</div>
 
             {/* CUSTOS FRETE */}
             <TaxaTable title="CUSTOS DE FRETE" rows={frete} setter={setFrete}
@@ -442,9 +442,9 @@ export default function PropostaAerea({ onBack }) {
                 <table style={{borderCollapse:"collapse",width:"100%",fontSize:11}}>
                   <thead>
                     <tr style={{background:G+"22"}}>
-                      <th style={{padding:"6px 10px",fontWeight:700,textAlign:"left",color:G,borderBottom:}}>TABELA DE ARMAZENAGEM</th>
-                      <th style={{padding:"6px 10px",fontWeight:700,textAlign:"center",color:G,borderBottom:}}>% SOBRE VALOR CIF</th>
-                      <th style={{padding:"6px 10px",fontWeight:700,textAlign:"right",color:G,borderBottom:}}>VALOR ESTIMADO</th>
+                      <th style={{padding:"6px 10px",fontWeight:700,textAlign:"left",color:G,borderBottom:"2px solid "+color}}>TABELA DE ARMAZENAGEM</th>
+                      <th style={{padding:"6px 10px",fontWeight:700,textAlign:"center",color:G,borderBottom:"2px solid "+color}}>% SOBRE VALOR CIF</th>
+                      <th style={{padding:"6px 10px",fontWeight:700,textAlign:"right",color:G,borderBottom:"2px solid "+color}}>VALOR ESTIMADO</th>
                     </tr>
                   </thead>
                   <tbody>
