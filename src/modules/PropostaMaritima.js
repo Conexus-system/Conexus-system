@@ -137,13 +137,13 @@ export default function PropostaMaritima({ onBack }) {
       <table style={{width:"100%",borderCollapse:"collapse",fontSize:11}}>
         <thead>
           <tr style={{background:color+"22"}}>
-            <th style={{padding:"6px 8px",textAlign:"left",fontWeight:800,fontSize:11,textTransform:"uppercase",color:BK,borderBottom:,width:"28%"}}>{title}</th>
-            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:,width:"9%"}}>MOEDA</th>
-            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:,width:"13%"}}>VALOR UNIT.</th>
-            <th style={{padding:"6px 8px",textAlign:"left",fontWeight:700,fontSize:10,color:"#555",borderBottom:,width:"22%"}}>UN. EMBARQUE</th>
-            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:,width:"9%"}}>QTDE.</th>
-            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:,width:"11%"}}>TOTAL</th>
-            {!print && <th style={{width:22,borderBottom:}}/>}
+            <th style={{padding:"6px 8px",textAlign:"left",fontWeight:800,fontSize:11,textTransform:"uppercase",color:BK,borderBottom:"1px solid #ddd",width:"28%"}}>{title}</th>
+            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:"1px solid #ddd",width:"9%"}}>MOEDA</th>
+            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:"1px solid #ddd",width:"13%"}}>VALOR UNIT.</th>
+            <th style={{padding:"6px 8px",textAlign:"left",fontWeight:700,fontSize:10,color:"#555",borderBottom:"1px solid #ddd",width:"22%"}}>UN. EMBARQUE</th>
+            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:"1px solid #ddd",width:"9%"}}>QTDE.</th>
+            <th style={{padding:"6px 8px",textAlign:"center",fontWeight:700,fontSize:10,color:"#555",borderBottom:"1px solid #ddd",width:"11%"}}>TOTAL</th>
+            {!print && <th style={{width:22}}/>}
           </tr>
         </thead>
         <tbody>
@@ -241,7 +241,7 @@ export default function PropostaMaritima({ onBack }) {
         <div style={{background:W,borderRadius:6,boxShadow:"0 2px 20px #0003",overflow:"hidden"}}>
 
           {/* CABEÇALHO */}
-          <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"16px 24px 12px",borderBottom:}}>
+          <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"16px 24px 12px",borderBottom:"2px solid "+color}}>
             <img src={LOGO} alt="Conexus Partners" style={{height:72,objectFit:"contain"}}/>
             <div style={{textAlign:"right"}}>
               {print ? (
@@ -331,7 +331,7 @@ export default function PropostaMaritima({ onBack }) {
             </div>
 
             {/* DETALHES */}
-            <div style={{fontWeight:800,fontSize:12,color:BK,marginBottom:10,paddingBottom:4,borderBottom:}}>DETALHES DA COTAÇÃO:</div>
+            <div style={{fontWeight:800,fontSize:12,color:BK,marginBottom:10,paddingBottom:4,borderBottom:"2px solid "+color}}>DETALHES DA COTAÇÃO:</div>
 
             {/* CUSTOS FRETE */}
             <TaxaTable title="TAXAS DE ORIGEM (FRETE MARÍTIMO)" rows={frete} setter={setFrete}
@@ -443,9 +443,9 @@ export default function PropostaMaritima({ onBack }) {
                 <table style={{borderCollapse:"collapse",width:"100%",fontSize:11}}>
                   <thead>
                     <tr style={{background:G+"22"}}>
-                      <th style={{padding:"6px 10px",fontWeight:700,textAlign:"left",color:G,borderBottom:}}>TABELA DE ARMAZENAGEM</th>
-                      <th style={{padding:"6px 10px",fontWeight:700,textAlign:"center",color:G,borderBottom:}}>% SOBRE VALOR CIF</th>
-                      <th style={{padding:"6px 10px",fontWeight:700,textAlign:"right",color:G,borderBottom:}}>VALOR ESTIMADO</th>
+                      <th style={{padding:"6px 10px",fontWeight:700,textAlign:"left",color:G,borderBottom:"2px solid "+color}}>TABELA DE ARMAZENAGEM</th>
+                      <th style={{padding:"6px 10px",fontWeight:700,textAlign:"center",color:G,borderBottom:"2px solid "+color}}>% SOBRE VALOR CIF</th>
+                      <th style={{padding:"6px 10px",fontWeight:700,textAlign:"right",color:G,borderBottom:"2px solid "+color}}>VALOR ESTIMADO</th>
                     </tr>
                   </thead>
                   <tbody>
