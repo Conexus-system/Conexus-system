@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { useState } from "react";
-import jsPDF from "jspdf";
 
 const LOGO = "https://raw.githubusercontent.com/Conexus-system/Conexus-system/main/Logo.png";
 
