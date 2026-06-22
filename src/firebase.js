@@ -17,12 +17,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey:            "COLE_AQUI_SUA_apiKey",
-  authDomain:        "COLE_AQUI_SEU_authDomain",
-  projectId:         "COLE_AQUI_SEU_projectId",
-  storageBucket:     "COLE_AQUI_SEU_storageBucket",
-  messagingSenderId: "COLE_AQUI_SEU_messagingSenderId",
-  appId:             "COLE_AQUI_SEU_appId",
+  apiKey:            "AIzaSyBckOhqwBg33Yxu05p5k54bmSXyzcKlnTg",
+  authDomain:        "conexus-partners.firebaseapp.com",
+  projectId:         "conexus-partners",
+  storageBucket:     "conexus-partners.firebasestorage.app",
+  messagingSenderId: "702459427973",
+  appId:             "1:702459427973:web:ae2ba46e3c354f5c387dec",
 };
 
 const app  = initializeApp(firebaseConfig);
